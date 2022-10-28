@@ -6,6 +6,7 @@ using std::cout;
 using std::endl;
 
 //#define TEMPERATURE
+//#define TARGET
 
 void main()
 {
@@ -56,6 +57,7 @@ void main()
 	}
 #endif // TEMPERATURE
 
+#ifdef TARGET
 	int n;
 	cout << "Введите число: "; cin >> n;
 	if (n > 0 && n < 10)	//если
@@ -65,5 +67,19 @@ void main()
 	else //в противном случае (иначе)
 	{
 		cout << "Вы Firefox" << endl;
+	}
+#endif // TARGET
+
+	double a, b;	//числа, введенные пользователем
+	char s;	//Sign - знак операции
+	cout << "Введите арифметическое выражение: "; 
+	cin >> a >> s >> b;
+	switch (s)
+	{
+	case '+':cout << a << " + " << b << " = " << a + b << endl; break;
+	case '-':cout << a << " - " << b << " = " << a - b << endl; break;
+	case '*':cout << a << " * " << b << " = " << a * b << endl; break;
+	case '/':cout << a << " / " << b << " = " << a / b << endl; break;
+	default: cout << "Error: No operation" << endl;
 	}
 }
