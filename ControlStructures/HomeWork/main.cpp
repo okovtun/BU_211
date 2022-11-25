@@ -1,44 +1,74 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+
+//#define FIBONACHI
+//#define FIBONACHI1
+#define FIBONACHI2
 
 void main()
 {
 	setlocale(LC_ALL, "Rus");
-	int number; // введёное число
-	int reverse = 0; // число, записанное наоборот
-	cout << "Введите число" << endl; cin >> number;
-	int buffer = number;
-	int remain[100];
-	int i = 0;
-	while (buffer % 10 != 0)
-	{
-		remain[i] = buffer % 10;
-		buffer = buffer / 10;
-		//cout << "Остаток номер " << i 
-		//<< " от числа " << number << " = " 
-		//<< remain[i] << ". Число = " << buffer << endl; //для теста программы
-		i++;
-	}
-	int min = 0, max = i - 1;
-	int n = 0;
-	while (min < max)
-	{
 
-		if (remain[min] == remain[max])
-		{
-			n += 2;
-			//cout << "Сравнил успешно" << endl; //для теста программы
-		};
-		//cout << "n = " << n << ", min = " << min << ", max = " << max << endl; //для теста программы
-		min++;
-		max--;
-	};
-	if (i % 2 == 1)
+#ifdef FIBONACHI
+
+	int a, b, sum;
+	int n;
+	a = sum = 0;
+	b = 1;
+	cout << " введите предельное число  "; cin >> n;
+	while (sum < n)
 	{
-		n = n + 1;
+		sum = a + b;
+		//cout << a << endl;
+		a = b;
+		b = sum;
+		cout << a << endl;
+		sum++;
+
 	}
-	if (n == i)
-		cout << "Число ПОЛИНДРОМ" << endl;
-	else
-		cout << "Число НЕ полиндром" << endl;
+	cout << endl;
+#endif // FIBONACHI
+
+#ifdef FIBONACHI1
+
+	int a = 0;
+	int b = 1;
+	int n;
+
+	cout << " введите предельное число  "; cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cout << a << endl;
+		a = a + b;
+		b = a - b;
+
+	}
+#endif // FIBONACHI1
+#ifdef FIBONACHI2
+
+	int a = 0;
+	int b = 1;
+	int n;
+	int t;
+
+	cout << " введите предельное число  "; cin >> n;
+	cout << " введите сколько чисел из ряда нужно вывести  "; cin >> t;
+	for (int i = 0; i < n; i++)
+	{
+		cout << a << endl;
+		a = a + b;
+		b = a - b;
+	}
+	cout << endl;
+	for (int j = 0; j < t; j++)
+	{
+		cout << a - a << endl;
+		a = a + b;
+		b = a - b;
+		cout << a << endl;
+	}
+#endif // FIBONACHI2
 }

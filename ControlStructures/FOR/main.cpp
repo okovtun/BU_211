@@ -21,7 +21,15 @@ void main()
 #endif // FOR_BASICS
 
 #ifdef FACTORIAL
-
+	int n;
+	double  f = 1;
+	cout << "¬ведите число: "; cin >> n;
+	for (int i = 1; i <= n; i++)
+	{
+		cout << i << "! = ";
+		f *= i;
+		cout << f << endl;
+	}
 #endif // FACTORIAL
 
 }
