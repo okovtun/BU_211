@@ -5,6 +5,8 @@ https://meet.google.com/mho-khdw-fhj
 TOREAD:
 http://softelectro.ru/ieee754.html
 
+//There are 10 kinds of people - who understand binary, and who's no
+
 TODO:
 ¬з€ть свою дату рождени€, разделить ее на два четырехразр€дных числа, и каждое четырехразр€дное число
 ѕеревести в Bin и Hex, результаты сопоставить по таблице.
