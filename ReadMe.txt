@@ -8,6 +8,8 @@ http://softelectro.ru/ieee754.html
 TODO:
 Вывести в консоль все фигуры из файла:
 https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
+https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg
+https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg
 
 //There are 10 kinds of people - who understand binary, and who's no
 

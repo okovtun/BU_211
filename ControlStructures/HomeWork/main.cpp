@@ -1,74 +1,43 @@
-#include<iostream>
+
+#include <iostream>
 using namespace std;
-using std::cin;
-using std::cout;
-using std::endl;
 
-//#define FIBONACHI
-//#define FIBONACHI1
-#define FIBONACHI2
-
-void main()
+int main()
 {
-	setlocale(LC_ALL, "Rus");
+	setlocale(LC_ALL, "");
 
-#ifdef FIBONACHI
+	int lines = 0;
+	int symbInLines = 0;
+	char symbol = 0;
 
-	int a, b, sum;
-	int n;
-	a = sum = 0;
-	b = 1;
-	cout << " введите предельное число  "; cin >> n;
-	while (sum < n)
+	cout << "Введите символ: ";
+	cin >> symbol;
+	cout << "Количество строк: ";
+	cin >> lines;
+	cout << "Количество символов в строке: ";
+	cin >> symbInLines;
+	cout << endl;
+
+	for (int i = 1; i <= lines; i++)
 	{
-		sum = a + b;
-		//cout << a << endl;
-		a = b;
-		b = sum;
-		cout << a << endl;
-		sum++;
-
+		if (i == 1 || i == lines) // 1-я и последняя строка
+		{
+			for (int j = 1; j <= symbInLines; j++)
+			{
+				cout << symbol; // сплошная из символов
+			}
+		}
+		else
+		{
+			cout << symbol; // показать один символ
+			for (int j = 1; j <= symbInLines - 2; j++)
+			{
+				cout << ' ';
+			}
+			cout << symbol;
+		}
+		cout << endl;
 	}
 	cout << endl;
-#endif // FIBONACHI
-
-#ifdef FIBONACHI1
-
-	int a = 0;
-	int b = 1;
-	int n;
-
-	cout << " введите предельное число  "; cin >> n;
-	for (int i = 0; i < n; i++)
-	{
-		cout << a << endl;
-		a = a + b;
-		b = a - b;
-
-	}
-#endif // FIBONACHI1
-#ifdef FIBONACHI2
-
-	int a = 0;
-	int b = 1;
-	int n;
-	int t;
-
-	cout << " введите предельное число  "; cin >> n;
-	cout << " введите сколько чисел из ряда нужно вывести  "; cin >> t;
-	for (int i = 0; i < n; i++)
-	{
-		cout << a << endl;
-		a = a + b;
-		b = a - b;
-	}
-	cout << endl;
-	for (int j = 0; j < t; j++)
-	{
-		cout << a - a << endl;
-		a = a + b;
-		b = a - b;
-		cout << a << endl;
-	}
-#endif // FIBONACHI2
+	return 0;
 }
