@@ -6,6 +6,10 @@ TOREAD:
 http://softelectro.ru/ieee754.html
 
 TODO:
+1. Пять проектов на выбор залить на GitHub;
+2. В журнал прислать ссылку на свой GitHub;
+
+DONE:
 Вывести в консоль все фигуры из файла:
 https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
 https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg
