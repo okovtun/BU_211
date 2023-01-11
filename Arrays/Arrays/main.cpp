@@ -1,5 +1,11 @@
 ﻿#include<iostream>
 using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+
+#define MIN_MAX_VAR_1
+//#define MIN_MAX_VAR_2
 
 void main()
 {
@@ -42,5 +48,33 @@ void main()
 	cout << "Среднее-арифметическое элементов массива: " << (double)sum / n << endl;
 
 	//Поиск минимального и максимального значения в массиве:
+#ifdef MIN_MAX_VAR_1
+	int min, max;
+	min = max = arr[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] < min)
+		{
+			//i - номер элемента массива
+			//arr[i] - значение элемента массива с номером 'i'
+			min = arr[i];
+		}
+		if (arr[i] > max)max = arr[i];
+	}
+	cout << "Минимально значение в массиве:  " << min << endl;
+	cout << "Максимальное значение в массиве:" << max << endl;
+#endif // MIN_MAX_VAR_1
+
+#ifdef MIN_MAX_VAR_2
+	int index_of_min, index_of_max;
+	index_of_min = index_of_max = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] < arr[index_of_min])index_of_min = i;
+		if (arr[i] > arr[index_of_max])index_of_max = i;
+	}
+	cout << "Минимальное значение в массиве:  " << arr[index_of_min] << endl;
+	cout << "Максимальное значение в массиве: " << arr[index_of_max] << endl;
+#endif // MIN_MAX_VAR_2
 
 }
