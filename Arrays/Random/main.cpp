@@ -16,17 +16,33 @@ void main()
 	*/
 
 	int minRand, maxRand;
-	cout << "Введите минимальное случайное число: "; cin >> minRand;
-	cout << "Введите максимально случайное число: "; cin >> maxRand;
+	do
+	{
+		cout << "Введите минимальное случайное число: "; cin >> minRand;
+		cout << "Введите максимально случайное число: "; cin >> maxRand;
+		if (maxRand <= minRand)cout << "Error: Incorrect values" << endl;
+	} while (maxRand <= minRand);
 
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand()%100;
+		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 
+	//Вывод исходного массива:
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << tab;
 	}
 	cout << endl;
+	
+	//Сортировка массива:
+
+	
+	//Вывод отсортированного массива:
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << tab;
+	}
+	cout << endl;
+
 }
