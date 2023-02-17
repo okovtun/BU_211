@@ -6,6 +6,9 @@ TOREAD:
 http://softelectro.ru/ieee754.html
 
 TODO:
+На ветке FunctionSeparation вынести функции в отдельные файлы.
+
+DONE:
 Добить перегрузку функций!!!
 
 TODO:
