@@ -63,7 +63,7 @@ void Sort(int arr[][COLS], const int ROWS, const int COLS)
 #endif // CLASSIC_SORT_2D
 
 	for (int i = 0; i < ROWS*COLS; i++)
-	{
+	{//—четчик 'i' последовательно выбирает элементы массива, в которые будет помощено минимальное значение
 		for (int j = i + 1; j < ROWS*COLS; j++)
 		{
 			if (arr[0][j] < arr[0][i])
