@@ -9,6 +9,11 @@ Install:
 https://windjview.sourceforge.io/en
 
 TODO:
+1. В ветке 'FunctionsTemplated' шаблонизировать все функции;
+2. От ветки 'FunctionsTemplated' создать ветку 'SeparationTemplated',
+   и в этой ветке вынести уже шаблонные функции в отденые файлы;
+
+DONE:
 На ветке FunctionSeparation вынести функции в отдельные файлы.
 
 DONE:
