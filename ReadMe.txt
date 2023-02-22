@@ -5,6 +5,9 @@ https://meet.google.com/mho-khdw-fhj
 TOREAD:
 http://softelectro.ru/ieee754.html
 
+Install:
+https://windjview.sourceforge.io/en
+
 TODO:
 На ветке FunctionSeparation вынести функции в отдельные файлы.
 
