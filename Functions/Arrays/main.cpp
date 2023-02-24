@@ -3,6 +3,7 @@
 using namespace std;
 
 #define tab "\t"
+#define delimiter "\n---------------------------------------------------------------\n"
 
 const int ROWS = 3;
 const int COLS = 5;
@@ -21,11 +22,12 @@ template<typename T>void Print(T arr[], const int n);
 template<typename T>void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>void Sort(T arr[], const int n);
-void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>T Sum(T arr[], const int n);
 int Sum(char arr[], const int n);
-int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>
+T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>double Avg(T arr[], const int n);
 const char* Avg(char arr[], const int n);
@@ -58,12 +60,17 @@ void main()
 	Print(i_arr_2, ROWS, COLS);
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
 	cout << "Среднее-арифметическое элементов массива: " << Avg(i_arr_2, ROWS, COLS) << endl;
-
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
 
+	cout << delimiter << endl;
+
 	double d_arr_2[ROWS][COLS];
 	FillRand(d_arr_2, ROWS, COLS);
+	Print(d_arr_2, ROWS, COLS);
+	cout << "Сумма элементов массива: " << Sum(d_arr_2, ROWS, COLS) << endl;
+	cout << "Среднее-арифметическое элементов массива: " << Avg(d_arr_2, ROWS, COLS) << endl;
+	Sort(d_arr_2, ROWS, COLS);
 	Print(d_arr_2, ROWS, COLS);
 }
 
@@ -163,7 +170,7 @@ template<typename T>void Sort(T arr[], const int n)
 		}
 	}
 }
-void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	int interations = 0;
 	for (int i = 0; i < ROWS; i++)
@@ -179,7 +186,7 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 					interations++;
 					if (arr[k][l] < arr[i][j])
 					{
-						int buffer = arr[i][j];
+						T buffer = arr[i][j];
 						arr[i][j] = arr[k][l];
 						arr[k][l] = buffer;
 					}
@@ -207,9 +214,10 @@ int Sum(char arr[], const int n)
 	}
 	return sum;
 }
-int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>
+T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
-	int sum = 0;
+	T sum = 0;
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
