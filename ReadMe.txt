@@ -3,6 +3,9 @@ https://www.youtube.com/watch?v=UpM9unB1Pgs&list=PLeqyOOqxeiIOawl8qOYJiv1-8oEHXZ
 https://meet.google.com/mho-khdw-fhj
 
 TOREAD:
+https://legacy.cplusplus.com/doc/tutorial/pointers/
+
+TOREAD:
 http://softelectro.ru/ieee754.html
 
 Install:
