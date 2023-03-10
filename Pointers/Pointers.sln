@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransferParameters", "Trans
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "References", "References\References.vcxproj", "{DB5D91ED-C297-4BB4-B58D-3EE13A00C1F6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicMemory", "DynamicMemory\DynamicMemory.vcxproj", "{D91B7CCA-FC39-4000-90AB-B64E2A210F37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{DB5D91ED-C297-4BB4-B58D-3EE13A00C1F6}.Release|x64.Build.0 = Release|x64
 		{DB5D91ED-C297-4BB4-B58D-3EE13A00C1F6}.Release|x86.ActiveCfg = Release|Win32
 		{DB5D91ED-C297-4BB4-B58D-3EE13A00C1F6}.Release|x86.Build.0 = Release|Win32
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Debug|x64.ActiveCfg = Debug|x64
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Debug|x64.Build.0 = Debug|x64
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Debug|x86.ActiveCfg = Debug|Win32
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Debug|x86.Build.0 = Debug|Win32
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Release|x64.ActiveCfg = Release|x64
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Release|x64.Build.0 = Release|x64
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Release|x86.ActiveCfg = Release|Win32
+		{D91B7CCA-FC39-4000-90AB-B64E2A210F37}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
