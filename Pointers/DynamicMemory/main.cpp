@@ -18,9 +18,9 @@ void FillRand(double** arr, const int rows, const int cols);
 template<typename T>void Print(T arr[], const int n);
 template<typename T>void Print(T** arr, const int rows, const int cols);
 
-template<typename T>T* push_back(T arr[], int& n, int value);
-template<typename T>T* push_front(T arr[], int& n, int value);
-template<typename T>T* insert(T arr[], int& n, int value, int index);
+template<typename T>T* push_back(T arr[], int& n, T value);
+template<typename T>T* push_front(T arr[], int& n, T value);
+template<typename T>T* insert(T arr[], int& n, T value, int index);
 
 template<typename T>T* pop_back( T arr[], int& n);
 template<typename T>T* pop_front(T arr[], int& n);
@@ -33,7 +33,7 @@ template<typename T>T** pop_row_front(T** arr, int& rows, const int cols);
 
 template<typename T>void push_col_back(T** arr, const int rows, int& cols);
 
-//#define DYNAMIC_MEMORY_1
+#define DYNAMIC_MEMORY_1
 #define DYNAMIC_MEMORY_2
 
 void main()
@@ -74,33 +74,33 @@ void main()
 	cout << "Введите количество строк: "; cin >> rows;
 	cout << "Введите количество элементов строки: "; cin >> cols;
 
-	double** arr = Allocate<double>(rows, cols);
+	double** arr_2 = Allocate<double>(rows, cols);
 	//cout << "Memory allocated, press any key to add row" << endl;
 	//system("PAUSE");
-	FillRand(arr, rows, cols);
-	Print(arr, rows, cols);
+	FillRand(arr_2, rows, cols);
+	Print(arr_2, rows, cols);
 
 	cout << "Добавление строки в конец массива: " << endl;
-	arr = push_row_back(arr, rows, cols);
-	Print(arr, rows, cols);
+	arr_2 = push_row_back(arr_2, rows, cols);
+	Print(arr_2, rows, cols);
 
 	cout << "Добавление строки в начало массива: " << endl;
-	arr = push_row_front(arr, rows, cols);
-	Print(arr, rows, cols);
+	arr_2 = push_row_front(arr_2, rows, cols);
+	Print(arr_2, rows, cols);
 
 	cout << delimiter << endl;
-	arr = pop_row_back(arr, rows, cols);
-	Print(arr, rows, cols);
+	arr_2 = pop_row_back(arr_2, rows, cols);
+	Print(arr_2, rows, cols);
 
 	cout << delimiter << endl;
-	arr = pop_row_front(arr, rows, cols);
-	Print(arr, rows, cols);
+	arr_2 = pop_row_front(arr_2, rows, cols);
+	Print(arr_2, rows, cols);
 
 	cout << delimiter << endl;
-	push_col_back(arr, rows, cols);
-	Print(arr, rows, cols);
+	push_col_back(arr_2, rows, cols);
+	Print(arr_2, rows, cols);
 
-	Clear(arr, rows);
+	Clear(arr_2, rows);
 }
 
 template<typename T>T** Allocate(int rows, int cols)
@@ -206,7 +206,7 @@ template<typename T>T* push_back(T arr[], int& n, T value)
 	n++;
 	return arr;
 }
-template<typename T>int* push_front(T arr[], int& n, T value)
+template<typename T>T* push_front(T arr[], int& n, T value)
 {
 	//1) Создаем новый массив нужного размера (на 1 элемент больше):
 	T* buffer = new T[n + 1];
