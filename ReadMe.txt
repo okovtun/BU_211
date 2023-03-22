@@ -12,15 +12,23 @@ Install:
 https://windjview.sourceforge.io/en
 
 TODO:
+1. ƒописать все функции из предыдущего задани€;
+2. —оздать ветку STDstrings, и применить в наших функци€х 
+   стандартные функции дл€ работы со строками и символами:
+	https://legacy.cplusplus.com/reference/cctype/
+	https://legacy.cplusplus.com/reference/cstdlib/
+	https://legacy.cplusplus.com/reference/cstring/
+
+TODO:
 ¬ проект NULLTerminatedLines добавить следующие функции:
-	char* to_lower(char str[]);		//переводит строку в нижний регистр
-	char* shrink(char str[]);		//удал€ет лишние пробелы из строки
+	char* to_lower(char str[]);		//переводит строку в нижний регистр	DONE
+	char* shrink(char str[]);		//удал€ет лишние пробелы из строки	DONE
 									//’орошо      живет      на       свете      ¬инни      ѕух
 									//’орошо живет на свете ¬инни ѕух
-	bool is_palindrome(const char str[]);	//определ€ет, €вл€етс€ ли строка палиндромом "или", "ага" "12321"
+	bool is_palindrome(const char str[]);	//определ€ет, €вл€етс€ ли строка палиндромом "или", "ага" "12321"	DONE
 
-	bool is_int_number(const char str[]);	//провер€ет, €вл€етс€ ли введенна€ строка целым дес€тичным числом
-	int  to_int_number(const char str[]);	//если строка €вл€етс€ целым дес€тичным числом, возвращает значение этого числа как 'int'
+	bool is_int_number(const char str[]);	//провер€ет, €вл€етс€ ли введенна€ строка целым дес€тичным числом							DONE
+	int  to_int_number(const char str[]);	//если строка €вл€етс€ целым дес€тичным числом, возвращает значение этого числа как 'int'	DONE
 	bool is_bin_number(const char str[]);	//провер€ет, €вл€етс€ ли введенна€ строка двоичным числом
 	int  bin_to_dec(const char str[]);		//если строка €вл€етс€ двоичным числом, возвращает дес€тичное значение этого числа
 	bool is_hex_number(const char str[]);	//провер€ет, €вл€етс€ ли введенна€ строка шестнадцатеричным числом
