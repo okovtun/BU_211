@@ -10,7 +10,7 @@ using std::endl;
 int** Allocate(int rows, int cols);
 void Clear(int** arr, int rows);
 
-void FillRand(int arr[], const int n);
+void FillRand(int arr[], int n);
 void FillRand(int** arr, const int rows, const int cols);
 
 void Print(int arr[], const int n);
@@ -68,6 +68,7 @@ void main()
 	//Memory leaks  
 #endif // DYNAMIC_MEMORY_1
 
+#ifdef DYNAMIC_MEMORY_2
 	int rows, cols;
 	cout << "Введите количество строк: "; cin >> rows;
 	cout << "Введите количество элементов строки: "; cin >> cols;
@@ -99,6 +100,8 @@ void main()
 	Print(arr, rows, cols);
 
 	Clear(arr, rows);
+#endif // DYNAMIC_MEMORY_2
+
 }
 
 int** Allocate(int rows, int cols)
@@ -121,7 +124,7 @@ void Clear(int** arr, int rows)
 	delete[] arr;
 }
 
-void FillRand(int arr[], const int n)
+void FillRand(int arr[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -129,6 +132,7 @@ void FillRand(int arr[], const int n)
 		//арифметику указателей и оператор разыменования:
 		*(arr + i) = rand() % 100;
 	}
+	n--;
 }
 void FillRand(int** arr, const int rows, const int cols)
 {
